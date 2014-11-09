@@ -240,13 +240,13 @@ header .header-news .header-news-element .article-count {
 
 nav {
   margin: 72px auto 0;
+  font-size: 14px;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 35px;
@@ -261,6 +261,7 @@ nav ul li {
 
 nav ul li:first-child {
   background: none;
+  padding-left: 16px;
 }
 
 nav ul li a:hover {
@@ -277,14 +278,19 @@ nav ul li a:hover {
 
 .section-inner {
   padding: 0 30px;
+  display: table;
 }
 
 .section-main.sidebar-right {
-  margin-right: 255px;
+  padding-right: 15px;
+  display: table-cell;
+  width: 765px;
+
 }
 aside.sidebar-right {
-  float: right;
-  width: 240px;
+  display: table-cell;
+  /*width: 240px;*/
+  vertical-align: top;
 }
 
 .section-name {
@@ -316,6 +322,7 @@ article.featured .article-meta {
 
 article.featured .article-meta .published {
   float: right;
+  color: white;
 }
 
 article.featured h3.title {
@@ -375,7 +382,7 @@ article.latest .summary {
   margin-bottom: 14px;
 }
 
-article.latest .published {
+.published {
   font-size: 12px;
   color: #999999;
 }
@@ -411,7 +418,7 @@ article.latest .published {
 }
 
 .headline .title {
-  margin-left: 66px;
+  margin: -3px 0 0 66px;
   font-size: 13px;
   line-height: 15px;
 }
@@ -425,13 +432,19 @@ article.latest .published {
   margin-bottom: 30px;
 }
 
+.b240 {
+  width: 240px;
+  margin-bottom: 19px;
+}
+
 .more-link {
-  padding: 25px;
+  padding: 26px 25px 25px 25px;
   text-align: center;
-  line-height: 49px;
+  font-size: 16px;
+  line-height: 58px;
 }
 .more-link a {
-  padding: 16px 40px;
+  padding: 15px 41px 12px 41px;
   color: #999999;
   border: 2px solid #999999;
   text-transform: uppercase;
@@ -449,4 +462,145 @@ article.latest .published {
   color: #1a93bb;
   border: 2px solid #1a93bb;
   text-decoration: none;
+}
+
+#section-news aside .inner {
+  border-top: 4px solid #d6d6c7;
+  padding: 14px 0 25px 0;
+}
+
+.news-logo {
+  display: block;
+  margin: 0 auto 16px;
+  width: 57px;
+  height: 57px;
+  background: url('../images/sprite.png') no-repeat scroll 0 -354px;
+}
+
+h2.section-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.news-list {
+  padding-left: 13px;
+  padding-bottom: 3px;
+}
+
+.news-list-item {
+  margin-bottom: 18px;
+}
+.news-list-item .published {
+  margin-bottom: 7px;
+}
+
+.news-list-item .title {
+  margin-bottom: 6px;
+  line-height: 17px;
+}
+
+.news-list-item .taxonomy {
+  font-size: 12px;
+  color: #999999;
+}
+
+.news-list-item .taxonomy a {
+  margin-right: 3px;
+  display: inline-block;
+  background-color: #efebe6;
+  color: #999999;
+  padding: 3px 8px 4px;
+  -moz-border-radius: 8px; /* Firefox */
+  -webkit-border-radius: 8px; /* Safari, Google Chrome */
+  -khtml-border-radius: 8px; /* KHTML */
+  -o-border-radius: 8px; /* Opera */
+  -ms-border-radius: 8px; /* IE8 */
+  -icab-border-radius: 8px; /* Icab */
+  border-radius: 8px; /* CSS3 */
+}
+
+.news-list-item .taxonomy a:hover {
+  color: white;
+  background-color: #4aa0c1;
+  text-decoration: none;
+}
+
+article.quoted {
+  background: white;
+  border-top: 3px solid #4aa0c1;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 12px 0 23px;
+}
+
+article.quoted .image {
+  float: left;
+}
+article.quoted .image img,
+article.quoted .image a {
+  display: block;
+}
+
+article.quoted .name {
+  margin: 10px 0 3px 100px;
+  color: #999999;
+}
+
+article.quoted .text {
+  margin: 0 0 0 100px;
+}
+
+footer {
+  background: #333333;
+  color: #999999;
+  font-size: 12px;
+}
+
+footer a {
+  color: #999999
+}
+
+footer a:hover,
+nav.footer ul li a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+nav.footer {
+  margin: 0 auto;
+  padding: 11px 0 90px;
+  border: 1px solid #5c5c5c;
+  font-size: 12px;
+}
+
+nav.footer ul li {
+  padding: 0 9px 0 17px;
+  background-position: -3px -56px;
+}
+nav.footer ul li:first-child {
+  padding-left: 9px;
+}
+
+footer .footer-top {
+  width: 1005px;
+  margin: 0 auto;
+  height: 144px;
+  position: relative;
+}
+
+footer .footer-top .logo {
+  position: absolute;
+  left: 16px;
+  top: 41px;
+}
+
+footer .footer-top .copyright {
+  position: absolute;
+  left: 255px;
+  top: 46px;
+  line-height: 18px;
+  width: 750px;
 }

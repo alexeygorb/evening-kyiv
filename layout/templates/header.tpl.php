@@ -14,7 +14,19 @@
 
   <h1 class="logo"><a href="/"><img src="/layout/images/logo.png" title="Вечерний Киев" /></a></h1>
 
-  <?php print $header_news; ?>
+  <?php print $header_news;
+
+  $colors = array('red', 'yellow', 'green');
+  $ran_key = array_rand($colors);
+  $color = $colors[$ran_key];
+  ?>
+
+  <div id="header-icons">
+    <div class="emo-link"><a href="/">Emo</a></div>
+    <div class="weather"><a href="/"></a> -23°</div>
+    <div class="traffic"><a href="/" class="<?php print $color; ?>">2</a> балла</div>
+    <div class="piggy"><a href="/"></a></div>
+  </div>
 
   <ul id="menu-secondary">
     <li><a href="/">События</a></li>

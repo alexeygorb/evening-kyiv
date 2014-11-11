@@ -9,6 +9,9 @@ $args = args();
 $section = '';
 
   switch ($args[0]) {
+    case 'news-page':
+      $section = 'news-page';
+      break;
     case 'main':
     default:
       $section = 'main';

@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
-  line-height: 1;
+  line-height: 1.13;
 }
 /*
 ol, ul {
@@ -79,6 +79,10 @@ a, a:link, a:active {
 
 a:hover {
   text-decoration: underline;
+}
+
+p {
+  margin: 0 0 1.2em 0;
 }
 
 header {
@@ -260,6 +264,10 @@ header .header-news .header-news-element .article-count {
   width: 39px;
   height: 29px;
   background: url('../images/sprite-header.png') no-repeat scroll 1px -2px;
+}
+
+#header-icons .emo-link a:hover {
+  background-position: 1px -121px;
 }
 
 #header-icons .weather {
@@ -615,12 +623,12 @@ h2.section-title {
   line-height: 17px;
 }
 
-.news-list-item .taxonomy {
+.taxonomy {
   font-size: 12px;
   color: #999999;
 }
 
-.news-list-item .taxonomy a {
+.taxonomy a {
   margin-right: 3px;
   display: inline-block;
   background-color: #efebe6;
@@ -635,7 +643,7 @@ h2.section-title {
   border-radius: 8px; /* CSS3 */
 }
 
-.news-list-item .taxonomy a:hover {
+.taxonomy a:hover {
   color: white;
   background-color: #4aa0c1;
   text-decoration: none;
@@ -936,4 +944,248 @@ footer .footer-top .copyright {
   background: url('../images/events-shadow.png');
   top: 0;
   left: 48px;
+}
+
+.section-main aside {
+  float: left;
+  width: 215px;
+}
+
+.content-sidebar-left {
+  margin-left: 215px;
+  background: white;
+  border-top: 4px solid #00befd;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow:    0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow:         0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  position:relative;
+  padding: 22px 25px;
+}
+
+.section-main aside .news-list {
+  padding-left: 1px;
+  padding-top: 0px;
+}
+
+.section-main aside .news-list .news-list-item {
+  padding: 8px 15px 7px 10px;
+  margin-bottom: 0;
+}
+
+.section-main aside .news-list .news-list-item.active,
+.section-main aside .news-list .news-list-item:hover {
+  background-color: #00bffe;
+  color: white;
+}
+
+.section-main aside .news-list .news-list-item.active .published,
+.section-main aside .news-list .news-list-item:hover .published,
+.section-main aside .news-list .news-list-item.active .title,
+.section-main aside .news-list .news-list-item:hover .title,
+.section-main aside .news-list .news-list-item.active .title a,
+.section-main aside .news-list .news-list-item:hover .title a,
+.section-main aside .news-list .news-list-item.active .title a:hover,
+.section-main aside .news-list .news-list-item:hover .title a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.section-main aside .news-list .news-list-item.active .taxonomy a,
+.section-main aside .news-list .news-list-item:hover .taxonomy a {
+  border: 1px solid white;
+  background: none;
+  color: white;
+  padding: 2px 7px 3px;
+}
+
+.section-main aside .news-list .news-list-item.active .taxonomy a:hover,
+.section-main aside .news-list .news-list-item:hover .taxonomy a:hover {
+  border: 1px solid white;
+  background: white;
+  color: #00bffe;
+}
+
+.change-font {
+  position: absolute;
+  right: 23px;
+  top: 17px;
+}
+.change-font a {
+  display: inline-block;
+  border: 1px solid #eeeae6;
+  height: 38px;
+  width: 38px;
+  text-align: center;
+  line-height: 38px;
+  -moz-border-radius: 21px; /* Firefox */
+  -webkit-border-radius: 21px; /* Safari, Google Chrome */
+  -khtml-border-radius: 21px; /* KHTML */
+  -o-border-radius: 21px; /* Opera */
+  -ms-border-radius: 21px; /* IE8 */
+  -icab-border-radius: 21px; /* Icab */
+  border-radius: 21px; /* CSS3 */
+}
+.change-font a:first-child {
+  font-size: 14px;
+}
+.change-font a:last-child {
+  font-size: 18px;
+}
+.change-font a:hover {
+  text-decoration: none;
+  border-color: #666;
+}
+
+article.full .article-meta {
+
+}
+
+article.full .article-meta > div {
+  display: inline-block;
+}
+
+article.full .article-meta .section-name {
+  margin-left: 9px;
+  display: inline-block;
+  background-color: #4aa0c1;
+  color: #ffffff;
+  padding: 7px 11px 6px;
+  -moz-border-radius: 12px; /* Firefox */
+  -webkit-border-radius: 12px; /* Safari, Google Chrome */
+  -khtml-border-radius: 12px; /* KHTML */
+  -o-border-radius: 12px; /* Opera */
+  -ms-border-radius: 12px; /* IE8 */
+  -icab-border-radius: 12px; /* Icab */
+  border-radius: 12px; /* CSS3 */
+
+}
+
+article.full h2 {
+  font-size: 31px;
+  font-weight: bold;
+  margin: 17px 0 12px;
+}
+
+
+article.full .taxonomy {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 21px;
+}
+
+article.full .taxonomy a {
+  margin-right: 0px;
+  display: inline-block;
+  background-color: transparent;
+  color: #333;
+  padding: 2px 10px 4px;
+  border: 1px solid #d6d6c7;
+  -moz-border-radius: 13px; /* Firefox */
+  -webkit-border-radius: 13px; /* Safari, Google Chrome */
+  -khtml-border-radius: 13px; /* KHTML */
+  -o-border-radius: 13px; /* Opera */
+  -ms-border-radius: 13px; /* IE8 */
+  -icab-border-radius: 13px; /* Icab */
+  border-radius: 13px; /* CSS3 */
+}
+
+article.full .taxonomy a:hover {
+  color: white;
+  background-color: #d6d6c7;
+  text-decoration: none;
+}
+
+article.full .article-image {
+  margin-bottom: 25px;
+}
+
+article.full .text {
+  font-size: 16px;
+  padding-bottom: 21px;
+
+}
+
+article.full .text p {
+  line-height: 20px;
+  text-align: justify;
+}
+
+.like-block {
+  border-top: 1px dotted #c0c0c0;
+  padding: 17px 0 7px 0;
+  border-bottom: 1px dotted #c0c0c0;
+}
+
+.like-block h3 {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.like-block .moods {
+  text-align: left;
+  margin: 0 0 0 2px;
+}
+.like-block .moods > div {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  text-align: center;
+}
+
+.like-block .moods > div:last-child {
+  margin-right: 0;
+}
+
+
+.like-block .moods a {
+  display: block;
+  color: #333333;
+  height: 21px;
+  line-height: 21px;
+  padding: 0 13px;
+  border: 1px solid #fe9191;
+  -moz-border-radius: 12px; /* Firefox */
+  -webkit-border-radius: 12px; /* Safari, Google Chrome */
+  -khtml-border-radius: 12px; /* KHTML */
+  -o-border-radius: 12px; /* Opera */
+  -ms-border-radius: 12px; /* IE8 */
+  -icab-border-radius: 12px; /* Icab */
+  border-radius: 12px; /* CSS3 */
+
+}
+
+.like-block .moods a:hover {
+  color: white;
+  background-color: #fd3c3c;
+  border-color: #fd3c3c;
+  text-decoration: none;
+}
+
+.like-block .moods .like a {
+  border: none;
+  text-indent: -9999px;
+  background: url('../images/sprite.png') no-repeat scroll 0px -520px;
+  -moz-border-radius: 0; /* Firefox */
+  -webkit-border-radius: 0; /* Safari, Google Chrome */
+  -khtml-border-radius: 0; /* KHTML */
+  -o-border-radius: 0; /* Opera */
+  -ms-border-radius: 0; /* IE8 */
+  -icab-border-radius: 0; /* Icab */
+  border-radius: 0; /* CSS3 */
+  width: 26px;
+  height: 23px;
+  padding: 0;
+
+}
+
+.like-block .moods .like a:hover {
+  background-position: -54px -520px;
+}
+
+.like-block .moods > div div {
+  padding: 10px 0;
+}
+
+.like-block .moods > div div.zero {
+  color: #999;
 }

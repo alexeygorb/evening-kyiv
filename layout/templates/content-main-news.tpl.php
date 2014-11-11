@@ -63,7 +63,7 @@
             <div class="article-image">
               <a href="/"><img src="/content/gritsenko.jpg" width="51" height="51"/></a>
             </div>
-            <div class="title"><a href="/">Путин использует население Донбасса и террористов втемную - экс-губернатор Луганщины Данилов</a></div>
+            <div class="title"><a href="/">Путин использует население Донбасса и террористов втемную</a></div>
           </div>
           <div class="headline">
             <div class="article-image">
@@ -75,7 +75,7 @@
             <div class="article-image">
               <a href="/"><img src="/content/chel1.jpg" width="51" height="51"/></a>
             </div>
-            <div class="title"><a href="/">Путин использует население Донбасса и террористов втемную - экс-губернатор Луганщины Данилов</a></div>
+            <div class="title"><a href="/">Путин использует население</a></div>
           </div>
         </div>
 
@@ -84,19 +84,19 @@
             <div class="article-image">
               <a href="/"><img src="/content/chel1.jpg" width="51" height="51"/></a>
             </div>
-            <div class="title"><a href="/">Несмотря на кризис, ритейлеры продолжают развиваться прежними темпами</a></div>
+            <div class="title"><a href="/">Несмотря на кризис, ритейлеры </a></div>
           </div>
           <div class="headline">
             <div class="article-image">
               <a href="/"><img src="/content/chel2.jpg" width="51" height="51"/></a>
             </div>
-            <div class="title"><a href="/">Несмотря на кризис, ритейлеры продолжают развиваться прежними темпами</a></div>
+            <div class="title"><a href="/">Несмотря на кризис, ритейлеры продолжают </a></div>
           </div>
           <div class="headline">
             <div class="article-image">
               <a href="/"><img src="/content/gritsenko.jpg" width="51" height="51"/></a>
             </div>
-            <div class="title"><a href="/">Несмотря на кризис, ритейлеры продолжают развиваться прежними темпами</a></div>
+            <div class="title"><a href="/">Несмотря на кризис, ритейлеры продолжают развиваться </a></div>
           </div>
         </div>
 
@@ -105,13 +105,13 @@
             <div class="article-image">
               <a href="/"><img src="/content/chel2.jpg" width="51" height="51"/></a>
             </div>
-            <div class="title"><a href="/">«Мы будем готовы сделать все, что нужно, для защиты интересов государства»</a></div>
+            <div class="title"><a href="/">«Мы будем готовы сделать все, что нужно, для защиты государства»</a></div>
           </div>
           <div class="headline">
             <div class="article-image">
               <a href="/"><img src="/content/chel1.jpg" width="51" height="51"/></a>
             </div>
-            <div class="title"><a href="/">«Мы будем готовы сделать все, что нужно, для защиты интересов государства»</a></div>
+            <div class="title"><a href="/">«Мы будем готовы сделать все, что нужно, для защиты государства»</a></div>
           </div>
           <div class="headline">
             <div class="article-image">

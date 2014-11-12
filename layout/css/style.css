@@ -787,13 +787,21 @@ footer .footer-top .copyright {
   line-height: 30px;
 }
 
+.section-main h2.section-title {
+  border-top: 4px solid #d6d6c7;
+  text-align: left;
+  padding-top: 25px;
+  margin-bottom: 29px;
+}
 
 #section-events .section-main h2.section-title {
+  border-top: 0;
   background-position: 0px -232px;
   font-size: 18px;
   padding-left: 79px;
   padding-top: 2px;
   height: 55px;
+  padding-bottom: 0;
 }
 
 #section-events .section-main h2.section-title span {
@@ -1432,6 +1440,10 @@ article.full .text p {
   line-height: 58px;
   padding-left: 73px;
   background: url('../images/sprite.png') no-repeat scroll 0 -578px;
+}
+
+#section-news-row .popular-content {
+  border-top: 4px solid #d6d6c7;
 }
 
 .week-events-list {

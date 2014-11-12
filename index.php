@@ -12,6 +12,9 @@ $section = '';
     case 'news-page':
       $section = 'news-page';
       break;
+    case 'section':
+      $section = 'section';
+      break;
     case 'main':
     default:
       $section = 'main';

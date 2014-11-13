@@ -31,11 +31,13 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1.13;
 }
-/*
+
 ol, ul {
-  list-style: none;
+  /*list-style: none;*/
+  margin: 0;
+  padding: 0;
 }
-*/
+
 blockquote, q {
   quotes: none;
 }
@@ -713,7 +715,9 @@ footer {
   font-size: 12px;
 }
 
-footer a {
+footer a,
+footer a:link,
+footer a:active {
   color: #999999
 }
 
@@ -772,19 +776,28 @@ footer .footer-top .copyright {
   font-size: 13px;
   color: #fbf7f1;
   background: #556835;
-  padding: 1px 10px;
+  padding: 14px 10px;
+  height: 536px;
+}
+.handbook-wrapper .handbook-wrapper-inner {
+  height: 536px;
 }
 .handbook-wrapper a {
   color: #fbf7f1;
 }
 .handbook-wrapper a:hover {
   font-weight: bold;
+  text-decoration: none;
 }
 
 .handbook-wrapper ul {
   list-style: none;
   padding-left: 11px;
   line-height: 30px;
+}
+
+.handbook-wrapper ul ul {
+  display: none;
 }
 
 .section-main h2.section-title {
@@ -1020,11 +1033,13 @@ aside .events-list article .venue {
 .section-main aside {
   display: table-cell;
   width: 215px;
+  vertical-align: top;
 }
 
 .content-sidebar-left-wrapper {
   display: table-cell;
   width: 535px;
+  vertical-align: top;
 }
 .content-sidebar-left {
   background: white;

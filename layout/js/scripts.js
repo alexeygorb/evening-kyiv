@@ -2,6 +2,45 @@ $(function() {
 
   equalizeBlocks();
 
+  var emoMenu = $('#emo-tags');
+  emoMenu.css('opacity', 0);
+  $('.emo-link a').click(function(e) {
+    e.preventDefault();
+    var emolink = $(this);
+    var mainMenu = $('#main-menu');
+    var emoMenu = $('#emo-tags');
+    if (emolink.hasClass('active')) {
+      emoMenu.animate({
+        left: -500,
+        opacity: 0
+      }, function() {$(this).hide()});
+      mainMenu.show();
+      mainMenu.css({
+        left: -500
+      });
+      mainMenu.animate({
+        left: 0,
+        opacity: 1
+      });
+      emolink.removeClass('active');
+    }
+    else {
+      mainMenu.animate({
+        left: -500,
+        opacity: 0
+      }, function() {$(this).hide()});
+      emoMenu.show();
+      emoMenu.css({
+        left: -500
+      });
+      emoMenu.animate({
+        left: 0,
+        opacity: 1
+      });
+      emolink.addClass('active');
+    }
+  });
+
   $('.handbook-wrapper-inner').mCustomScrollbar();
   $('.handbook-wrapper a').click(function(e) {
     var link = $(this);
@@ -19,6 +58,8 @@ $(function() {
       }
     }
   });
+
+  /*$('#section-events .calendar-wrapper .calendar').datepicker();*/
 
 });
 

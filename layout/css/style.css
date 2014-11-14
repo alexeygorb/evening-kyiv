@@ -95,6 +95,10 @@ header {
   height: 230px;
 }
 
+.hidden {
+  display: none;
+}
+
 .header-inner {
   height: 230px;
   padding: 0 30px;
@@ -268,8 +272,12 @@ header .header-news .header-news-element .article-count {
   background: url('../images/sprite-header.png') no-repeat scroll 1px -2px;
 }
 
-#header-icons .emo-link a:hover {
+#header-icons .emo-link a:hover,
+#header-icons .emo-link a.active {
   background-position: 1px -121px;
+}
+#header-icons .emo-link a.active:hover {
+  background-position: 1px -2px;
 }
 
 #header-icons .weather {
@@ -346,9 +354,59 @@ header .header-news .header-news-element .article-count {
 }
 
 nav {
-  margin: 72px auto 0;
   font-size: 14px;
 }
+
+nav#main-menu {
+  position: absolute;
+  top: 181px;
+  left: 0;
+  padding-left: 30px;
+  width: 1005px;
+}
+
+nav#emo-tags {
+  position: absolute;
+  top: 186px;
+  left: 0;
+  padding: 1px 1px 1px 31px;
+  width: 1003px;
+  vertical-align: middle;
+}
+
+nav#emo-tags h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline;
+  margin-right: 9px;
+}
+
+
+nav#emo-tags a {
+  display: inline-block;
+  color: #333333;
+  height: 21px;
+  line-height: 20px;
+  padding: 0 10px;
+  border: 1px solid #fe9191;
+  -moz-border-radius: 12px; /* Firefox */
+  -webkit-border-radius: 12px; /* Safari, Google Chrome */
+  -khtml-border-radius: 12px; /* KHTML */
+  -o-border-radius: 12px; /* Opera */
+  -ms-border-radius: 12px; /* IE8 */
+  -icab-border-radius: 12px; /* Icab */
+  border-radius: 12px; /* CSS3 */
+  background: #f5f1eb;
+  margin-top: 1px;
+}
+
+nav#emo-tags a:hover {
+  color: white;
+  background-color: #fd3c3c;
+  border-color: #fd3c3c;
+  text-decoration: none;
+}
+
 
 nav ul {
   list-style: none;

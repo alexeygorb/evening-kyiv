@@ -87,6 +87,7 @@
             <div class="more-link"><a href="/">Все события</a></div>
           </div>
 
+          <div class="calendar-wrapper"><div class="calendar"></div><a href="#" class="x">&nbsp;</a></div>
         </div>
 
         <!-- SIDEBAR RIGHT -->

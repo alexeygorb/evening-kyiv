@@ -35,7 +35,17 @@
     <li class="search"><a href="/">Поиск</a></li>
   </ul>
 
-  <nav>
+  <nav id="main-menu">
     <ul><li><a href="/">Столица</a></li><li><a href="/">Репортаж</a></li><li><a href="/">Точка зрения</a></li><li><a href="/">Топ рейтинги</a></li><li><a href="/">5 вопросов чиновнику</a></li><li><a href="/">Потребитель</a></li></ul>
+  </nav>
+  <nav id="emo-tags" class="hidden">
+    <h3>Выбирай статьи по настроению:</h3>
+        <a href="/">тег</a>
+        <a href="/">еще один</a>
+        <a href="/">ха-ха</a>
+        <a href="/">няшно</a>
+        <a href="/">фу</a>
+        <a href="/">упс</a>
+        <a href="/">о боже!</a>
   </nav>
 </div>

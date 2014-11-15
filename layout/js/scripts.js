@@ -129,6 +129,18 @@
       });
     }
 
+    var asideSection = $('aside .inner');
+    var calendar = asideSection.find('.calendar-wrapper .calendar');
+    var once = calendar.once('calendar');
+    if (once.length > 0) {
+      calendar.datepicker({
+        locale: 'ru',
+        dateFormat: "yy-mm-dd",
+        onSelect: function (dateText, instance) {
+          console.log(dateText);
+        }
+      });
+    }
   };
 
   var dropSelector = function (context) {

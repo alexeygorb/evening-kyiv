@@ -1704,12 +1704,7 @@ article.report.full .share-block {
   margin-bottom:15px;
 }
 
-#section-events .calendar-wrapper {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 178px;
-  background: white;
+.calendar-wrapper {
   -moz-border-radius: 6px; /* Firefox */
   -webkit-border-radius: 6px; /* Safari, Google Chrome */
   -khtml-border-radius: 6px; /* KHTML */
@@ -1719,8 +1714,29 @@ article.report.full .share-block {
   border-radius: 6px; /* CSS3 */
   padding: 10px 11px;
 }
+#section-events .calendar-wrapper {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 178px;
+  background: white;
+}
 
-#section-events .calendar {
+aside .calendar-wrapper {
+  -moz-border-radius: 8px; /* Firefox */
+  -webkit-border-radius: 8px; /* Safari, Google Chrome */
+  -khtml-border-radius: 8px; /* KHTML */
+  -o-border-radius: 8px; /* Opera */
+  -ms-border-radius: 8px; /* IE8 */
+  -icab-border-radius: 8px; /* Icab */
+  border-radius: 8px; /* CSS3 */
+  padding: 10px 12px;
+  overflow: hidden;
+  border: 2px solid #eeeae5;
+  margin: 2px 0 27px;
+}
+
+.calendar-wrapper .calendar {
   -moz-border-radius: 6px; /* Firefox */
   -webkit-border-radius: 6px; /* Safari, Google Chrome */
   -khtml-border-radius: 6px; /* KHTML */
@@ -1739,7 +1755,7 @@ article.report.full .share-block {
   background: none;
   position: relative;
   z-index: 10;
-  width: 214px;
+  width: 212px;
   padding: 0;
 }
 .ui-datepicker .ui-datepicker-header {
@@ -1767,6 +1783,7 @@ article.report.full .share-block {
   background: none;
   border: 0;
   position: relative;
+  z-index: 1;
 }
 
 .ui-datepicker .ui-datepicker-calendar td a.ui-state-active {

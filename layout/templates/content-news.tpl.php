@@ -300,6 +300,7 @@
           <div class="more-link"><a href="/">Все события</a></div>
         </div>
 
+        <div class="calendar-wrapper"><div class="calendar"></div></div>
 
         <!-- Quote -->
         <article class="quoted clearfix">

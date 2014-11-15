@@ -12,7 +12,28 @@
               <li><a href="/">Кино</a></li>
               <li><a href="/">Спектакли</a></li>
             </ul>
-            <div class="select-types"><a href="#"><span>Все типы</span></a></div>
+            <div class="select-types"><a href="#"><span>Все типы</span></a>
+              <div>
+                <ul>
+                  <li data-value="1">Название типа</li>
+                  <li data-value="2">Название ещё одного типа</li>
+                  <li data-value="3">Вот ещё одно</li>
+                  <li data-value="4">Выбранный тип</li>
+                  <li data-value="5">Выбери меня</li>
+                  <li data-value="6">Название типа</li>
+                  <li data-value="7">Название ещё одного типа</li>
+                  <li data-value="8">Вот ещё одно</li>
+                  <li data-value="9">Выбери меня</li>
+                  <li data-value="10">Выбери меня</li>
+                  <li data-value="11">Название типа</li>
+                  <li data-value="1">Название типа</li>
+                  <li data-value="2">Название ещё одного типа</li>
+                  <li data-value="3">Вот ещё одно</li>
+                  <li data-value="4">Выбранный тип</li>
+                  <li data-value="5">Выбери меня</li>
+                </ul>
+              </div>
+            </div>
           </nav>
 
           <div class="actions clearfix">
@@ -27,10 +48,10 @@
                   <a href="/"><img src="/content/image-square1.jpg" width="136" height="136"/></a>
                 </div>
                 <div class="content">
-                <div class="section-name">Концерт</div>
-                <h3 class="title"><a href="/">Марчело Бурлон в Карабас Бар</a></h3>
-                <div class="venue">Центральный Дом Художника</div>
-                <div class="status"><a href="#">Пойти</a> <span>14</span></div>
+                  <div class="section-name">Концерт</div>
+                  <h3 class="title"><a href="/">Марчело Бурлон в Карабас Бар</a></h3>
+                  <div class="venue">Центральный Дом Художника</div>
+                  <div class="status"><a href="#">Пойти</a> <span>14</span></div>
                 </div>
               </article>
 
@@ -39,10 +60,10 @@
                   <a href="/"><img src="/content/image-square2.jpg" width="136" height="136"/></a>
                 </div>
                 <div class="content">
-                <div class="section-name">Выставка</div>
-                <h3 class="title"><a href="/">Ногу Свело в Дворце Спорта</a></h3>
-                <div class="venue">Арт-кафе «Гей-Гоп»</div>
-                <div class="status"><a href="#" class="active">Я иду!</a> <span>124</span></div>
+                  <div class="section-name">Выставка</div>
+                  <h3 class="title"><a href="/">Ногу Свело в Дворце Спорта</a></h3>
+                  <div class="venue">Арт-кафе «Гей-Гоп»</div>
+                  <div class="status"><a href="#" class="active">Я иду!</a> <span>124</span></div>
                 </div>
               </article>
 
@@ -51,10 +72,10 @@
                   <a href="/"><img src="/content/image-square3.jpg" width="136" height="136"/></a>
                 </div>
                 <div class="content">
-                <div class="section-name">Концерт</div>
-                <h3 class="title"><a href="/">Марчело Бурлон в Карабас Бар</a></h3>
-                <div class="venue">Центральный Дом Художника</div>
-                <div class="status"><a href="#">Пойти</a> <span>14</span></div>
+                  <div class="section-name">Концерт</div>
+                  <h3 class="title"><a href="/">Марчело Бурлон в Карабас Бар</a></h3>
+                  <div class="venue">Центральный Дом Художника</div>
+                  <div class="status"><a href="#">Пойти</a> <span>14</span></div>
                 </div>
               </article>
 
@@ -63,10 +84,10 @@
                   <a href="/"><img src="/content/image-square4.jpg" width="136" height="136"/></a>
                 </div>
                 <div class="content">
-                <div class="section-name">Выставка</div>
-                <h3 class="title"><a href="/">Ногу Свело в Дворце Спорта</a></h3>
-                <div class="venue">Арт-кафе «Гей-Гоп»</div>
-                <div class="status"><a href="#" class="active">Я иду!</a> <span>124</span></div>
+                  <div class="section-name">Выставка</div>
+                  <h3 class="title"><a href="/">Ногу Свело в Дворце Спорта</a></h3>
+                  <div class="venue">Арт-кафе «Гей-Гоп»</div>
+                  <div class="status"><a href="#" class="active">Я иду!</a> <span>124</span></div>
                 </div>
               </article>
 
@@ -75,10 +96,10 @@
                   <a href="/"><img src="/content/image-square5.jpg" width="136" height="136"/></a>
                 </div>
                 <div class="content">
-                <div class="section-name">Концерт</div>
-                <h3 class="title"><a href="/">Марчело Бурлон в Карабас Бар</a></h3>
-                <div class="venue">Центральный Дом Художника</div>
-                <div class="status"><a href="#" class="active">Я иду!</a> <span>14</span></div>
+                  <div class="section-name">Концерт</div>
+                  <h3 class="title"><a href="/">Марчело Бурлон в Карабас Бар</a></h3>
+                  <div class="venue">Центральный Дом Художника</div>
+                  <div class="status"><a href="#" class="active">Я иду!</a> <span>14</span></div>
                 </div>
               </article>
 
@@ -87,33 +108,42 @@
             <div class="more-link"><a href="/">Все события</a></div>
           </div>
 
+          <div class="calendar-wrapper"><div class="calendar"></div><a href="#" class="x">&nbsp;</a></div>
         </div>
 
         <!-- SIDEBAR RIGHT -->
         <aside class="sidebar-right">
           <div class="inner">
             <h2 class="section-title">Справочник</h2>
-            <div class="handbook-wrapper">
-              <ul>
-                <li>Аварийные службы, ЖКХ
-                  <ul><li>Гостиницы (34)</li><li>Хостелы (34)</li></ul>
-                </li>
-                <li>Атомобили, автосервис</li>
-                <li>Банки, страхование</li>
-                <li>Власть, силовые структуры</li>
-                <li>Гостиницы, Хостелы
-                  <ul><li>Гостиницы (34)</li><li>Хостелы (34)</li></ul>
-                </li>
-                <li>Животные, ветеринария</li>
-                <li>За городом</li>
-                <li>Кафе, бары, рестораны</li>
-                <li>Красота, здоровье</li>
-                <li>Медицина</li>
-                <li>Оразование, наука</li>
-                <li>Отдых, развлечения</li>
-                <li>Прокат, аренда</li>
-              </ul>
-            </div>
+            <div class="handbook-wrapper"><div class="handbook-wrapper-inner">
+                <ul>
+                  <li><a href="#">Аварийные службы, ЖКХ</a>
+                    <ul><li><a href="/">Аварийные службы (2)</a></li><li><a href="/">ЖКХ (81)</a></li></ul>
+                  </li>
+                  <li><a href="#">Атомобили, автосервис</a>
+                    <ul><li><a href="/">Атомобили (23)</a></li><li><a href="/">Автосервис (73)</a></li></ul>
+                  </li>
+                  <li><a href="#">Банки, страхование</a>
+                    <ul><li><a href="/">Банки (23)</a></li><li><a href="/">Страхование (73)</a></li></ul>
+                  </li>
+                  <li><a href="#">Власть, силовые структуры</a>
+                    <ul><li><a href="/">Власть (23)</a></li><li><a href="/">Силовые структуры (73)</a></li></ul>
+                  </li>
+                  <li><a href="#">Гостиницы, Хостелы</a>
+                    <ul><li><a href="/">Гостиницы (34)</a></li><li><a href="/">Хостелы (34)</a></li></ul>
+                  </li>
+                  <li><a href="#">Животные, ветеринария</a>
+                    <ul><li><a href="/">Животные (34)</a></li><li><a href="/">ветеринария (34)</a></li></ul>
+                  </li>
+                  <li><a href="/">За городом</a></li>
+                  <li><a href="/">Кафе, бары, рестораны</a></li>
+                  <li><a href="/">Красота, здоровье</a></li>
+                  <li><a href="/">Медицина</a></li>
+                  <li><a href="/">Оразование, наука</a></li>
+                  <li><a href="/">Отдых, развлечения</a></li>
+                  <li><a href="/">Прокат, аренда</a></li>
+                </ul>
+              </div></div>
           </div>
 
         </aside>

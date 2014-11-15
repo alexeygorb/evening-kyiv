@@ -15,6 +15,12 @@ $section = '';
     case 'section':
       $section = 'section';
       break;
+    case 'report-page':
+      $section = 'report-page';
+      break;
+    case 'ajax':
+      $section = 'ajax';
+      break;
     case 'main':
     default:
       $section = 'main';

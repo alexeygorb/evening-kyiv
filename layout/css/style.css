@@ -743,6 +743,14 @@ aside .more-link {
   background: url('../images/sprite.png') no-repeat scroll 0 -232px;
 }
 
+.reports-logo {
+  display: block;
+  margin: 0 auto 16px;
+  width: 58px;
+  height: 58px;
+  background: url('../images/sprite.png') no-repeat scroll 0 -908px;
+}
+
 .front-logo {
   display: block;
   margin: 0 auto 16px;
@@ -1556,6 +1564,11 @@ article.full .text p {
   font-weight: normal;
 }
 
+article.report.full .share-block {
+  border: 0;
+  padding-bottom: 20px;
+}
+
 .read-more {
   margin: 0 -5px;
 }
@@ -1650,6 +1663,17 @@ article.full .text p {
 .week-events-list h2 {
   margin-bottom: 20px;
 }
+
+
+.reports-list-block {
+  border-top: 3px solid #d6d6c7;
+  padding-top: 14px;
+}
+
+.reports-list-block h2 {
+  margin-bottom: 20px;
+}
+
 
 .popular-tags {
   margin-top: 42px;

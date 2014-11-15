@@ -16,6 +16,8 @@ function template($template_file, $variables, $prefix = '', $extension = 'tpl.ph
     $prefix = 'layout/templates';
   }
 
+  preprocess_template($variables);
+
   $preprocess = 'preprocess_' . strtr($template_file, array('-' => '_', '.' => '_'));
   if (function_exists($preprocess)) {
     $preprocess($variables);
@@ -33,6 +35,9 @@ function template($template_file, $variables, $prefix = '', $extension = 'tpl.ph
   return ob_get_clean();
 }
 
+function preprocess_template(&$vars) {
+  $vars['args'] = args();
+}
 
 /**
  * Returns the requested URL path of the page being viewed.

@@ -1,23 +1,25 @@
 (function($) {
 
-  var equalizeBlocks = function () {
+  var equalizeBlocks = function (context) {
 
-    $('.news-latest-3,.news-latest-4').equalizer({columns: 'article'});
-    $('.events-list').equalizer({columns: 'article'});
-    $('.read-more-list').equalizer({columns: 'article'});
-    $('.headlines .headline-row').equalizer({columns: '.headline'});
+    $('.news-latest-3,.news-latest-4', context).once('equal').equalizer({columns: 'article'});
+    $('.events-list').once('equal').equalizer({columns: 'article'});
+    $('.read-more-list').once('equal').equalizer({columns: 'article'});
+    $('.headlines .headline-row').once('equal').equalizer({columns: '.headline'});
 
   };
 
   var searchBarInit = function () {
 
     var searchBar = $('#menu-secondary li.search');
-    searchBar.addClass('collapsed');
-    setTimeout(function() {searchBar.addClass('transition')}, 33);
-    $('#menu-secondary li.search a').click(function (e) {
-      e.preventDefault();
-      searchBar.removeClass('collapsed');
-    });
+      searchBar.addClass('collapsed');
+      setTimeout(function () {
+        searchBar.addClass('transition')
+      }, 33);
+      $('#menu-secondary li.search a').click(function (e) {
+        e.preventDefault();
+        searchBar.removeClass('collapsed');
+      });
 
   };
 
@@ -76,77 +78,115 @@
 
   };
 
-  var handBookInit = function() {
-    $('.handbook-wrapper-inner').mCustomScrollbar();
-    $('.handbook-wrapper a').click(function(e) {
-      var link = $(this);
-      if (link.attr('href') == '#') {
-        e.preventDefault();
-        var item = link.parent();
-        var submenu = item.find('ul');
-        if (submenu.length > 0) {
-          if (submenu.hasClass('expanded')) {
-            submenu.slideUp(function() {submenu.removeClass('expanded');});
-          }
-          else {
-            submenu.slideDown(function() {submenu.addClass('expanded');});
+  var handBookInit = function(context) {
+    var wrapper = $('.handbook-wrapper', context).once('handbook');
+    if (wrapper.length > 0) {
+      $('.handbook-wrapper-inner').mCustomScrollbar();
+      $('.handbook-wrapper a').click(function (e) {
+        var link = $(this);
+        if (link.attr('href') == '#') {
+          e.preventDefault();
+          var item = link.parent();
+          var submenu = item.find('ul');
+          if (submenu.length > 0) {
+            if (submenu.hasClass('expanded')) {
+              submenu.slideUp(function () {
+                submenu.removeClass('expanded');
+              });
+            }
+            else {
+              submenu.slideDown(function () {
+                submenu.addClass('expanded');
+              });
+            }
           }
         }
-      }
-    });
+      });
+    }
   };
 
-  var calendarInit = function () {
+  var calendarInit = function (context) {
 
     var eventSection = $('#section-events');
-    eventSection.find(' .calendar-wrapper .calendar').datepicker({
-      locale: 'ru',
-      dateFormat: "yy-mm-dd",
-      onSelect: function(dateText, instance) {
-        console.log(dateText);
+    var calendar = eventSection.find('.calendar-wrapper .calendar');
+    var once = calendar.once('calendar');
+    if (once.length > 0) {
+      calendar.datepicker({
+        locale: 'ru',
+        dateFormat: "yy-mm-dd",
+        onSelect: function (dateText, instance) {
+          console.log(dateText);
+          eventSection.find('.calendar-wrapper').fadeToggle(300);
+        }
+      });
+      eventSection.find('.actions .date').click(function (e) {
+        e.preventDefault();
         eventSection.find('.calendar-wrapper').fadeToggle(300);
-      }
-    });
-    eventSection.find('.actions .date').click(function(e) {
-      e.preventDefault();
-      eventSection.find('.calendar-wrapper').fadeToggle(300);
-    });
-    eventSection.find('a.x').click(function(e) {
-      e.preventDefault();
-      eventSection.find('.calendar-wrapper').fadeToggle(300);
-    });
+      });
+      eventSection.find('a.x').click(function (e) {
+        e.preventDefault();
+        eventSection.find('.calendar-wrapper').fadeToggle(300);
+      });
+    }
 
   };
 
-  var dropSelector = function () {
-    var menu = $('.select-types > div');
-    var link = $('.select-types > a');
-    link.click(function(e) {
-      var link = $(this);
-      e.preventDefault();
-      link.toggleClass('active');
-      if (link.hasClass('active')) {
-        menu.fadeIn(300);
-      }
-      else {
-        menu.fadeOut(300);
-      }
-    });
-    $('.select-types li').click(function() {
-      var value = $(this).data('value');
-      console.log(value);
-      link.click();
-    });
-    menu.mCustomScrollbar();
+  var dropSelector = function (context) {
+    var types = $(context).find('.select-types').once('drop');
+    if (types.length > 0) {
+      var menu = $('.select-types > div');
+      var link = $('.select-types > a');
+      link.click(function (e) {
+        var link = $(this);
+        e.preventDefault();
+        link.toggleClass('active');
+        if (link.hasClass('active')) {
+          menu.fadeIn(300);
+        }
+        else {
+          menu.fadeOut(300);
+        }
+      });
+      $('.select-types li').click(function () {
+        var value = $(this).data('value');
+        console.log(value);
+        link.click();
+      });
+      menu.mCustomScrollbar();
+    }
+  };
+
+  var initBehaviors = function(context) {
+
+    equalizeBlocks(context);
+    handBookInit(context);
+    calendarInit(context);
+    dropSelector(context);
+
   };
 
   $(function() {
 
-    equalizeBlocks();
     searchBarInit();
     emoMenuBehavior();
-    handBookInit();
-    calendarInit();
-    dropSelector();
+
+    initBehaviors(document);
+
+    var offset = 5;
+    $('#section-news .more-link').click(function(e) {
+      e.preventDefault();
+      $.ajax('/ajax/news/' + offset, {
+        dataType: 'html',
+        success: function(data) {
+          offset += 6;
+          var receiver = $('#section-news .ajax-receiver');
+          var newContent = $(data).wrapAll('<div class="new-content"></div>').parent();
+          newContent.hide();
+          newContent.appendTo(receiver);
+          newContent.slideDown();
+          initBehaviors(receiver);
+        }
+      });
+    });
   });
 })(jQuery);

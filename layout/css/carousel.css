@@ -1,0 +1,145 @@
+/** Stage container **/
+
+.section-content .stage {
+  width: 485px;
+  margin: 0;
+  position: relative;
+}
+
+/** Navigation container **/
+
+.section-content .navigation {
+  width: 215px;
+  margin: 0;
+  position: relative;
+}
+
+/** Shared carousel styles **/
+
+.section-content .carousel {
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+.section-content .article-image .carousel ul {
+  width: 20000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section-content .article-image .carousel li {
+  float: left;
+}
+
+
+.section-content .report-thumbs .carousel ul {
+  height: 20000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/** Stage carousel specific styles **/
+
+.section-content .carousel-stage {
+  /*
+  height: 400px;
+  border: 10px solid #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 2px #999;
+  -moz-box-shadow: 0 0 2px #999;
+  box-shadow: 0 0 2px #999;
+  */
+}
+
+/** Navigation carousel specific styles **/
+
+.section-content .carousel-navigation {
+  height: 808px;
+  width: 215px;
+}
+
+.section-content .carousel-navigation li {
+  cursor: pointer;
+  background-color: #eeeae5;
+  padding: 10px 11px;
+  margin: 0 0 20px 0;
+}
+
+.section-content .carousel-navigation li img {
+  display: block;
+}
+
+.section-content .carousel-navigation li.active {
+  background-color: #00bffe;
+}
+
+/** Stage carousel controls **/
+
+.section-content .prev-stage,
+.section-content .next-stage {
+  display: block;
+  position: absolute;
+  top: 147px;
+  width: 33px;
+  height: 33px;
+  text-indent: -9999px;
+  background: url('../images/sprite.png') no-repeat scroll -11px -785px white;
+  border: 1px solid #eeeae5;
+  z-index: 12;
+  -moz-border-radius: 19px; /* Firefox */
+  -webkit-border-radius: 19px; /* Safari, Google Chrome */
+  -khtml-border-radius: 19px; /* KHTML */
+  -o-border-radius: 19px; /* Opera */
+  -ms-border-radius: 19px; /* IE8 */
+  -icab-border-radius: 19px; /* Icab */
+  border-radius: 19px; /* CSS3 */
+}
+
+.section-content .prev-stage.inactive,
+.section-content .next-stage.inactive {
+  opacity: .5;
+  cursor: default;
+}
+
+.section-content .prev-stage {
+  left: -17px;
+}
+
+.section-content .next-stage {
+  right: -17px;
+  background-position: -51px -785px;
+}
+
+/** Navigation carousel controls **/
+
+.section-content .prev-navigation,
+.section-content .next-navigation {
+  display: block;
+  width: 33px;
+  height: 33px;
+  margin: 0 auto 17px;
+  background: url('../images/sprite.png') no-repeat scroll -33px -709px;
+  text-indent: -9999px;
+}
+
+.section-content .prev-navigation {
+}
+
+.section-content .next-navigation {
+  background-position: -33px -749px;
+  margin: 17px auto 0;
+}
+
+.section-content .prev-navigation.inactive,
+.section-content .next-navigation.inactive {
+  opacity: .5;
+  cursor: default;
+}

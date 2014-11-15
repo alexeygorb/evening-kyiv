@@ -32,7 +32,10 @@
     <li><a href="/">События</a></li>
     <li><a href="/">Места</a></li>
     <li><a href="/">Справочник</a></li>
-    <li class="search"><a href="/">Поиск</a></li>
+    <li class="search"><a href="#">Поиск</a><form id="search-form" method="post" action="/">
+        <input type="text" name="search" placeholder="поиск по сайту" value="" />
+
+      </form></li>
   </ul>
 
   <nav id="main-menu">
@@ -41,7 +44,7 @@
   <nav id="emo-tags" class="hidden">
     <h3>Выбирай статьи по настроению:</h3>
         <a href="/">тег</a>
-        <a href="/">еще один</a>
+        <a href="/" class="active">еще один</a>
         <a href="/">ха-ха</a>
         <a href="/">няшно</a>
         <a href="/">фу</a>

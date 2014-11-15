@@ -12,7 +12,28 @@
               <li><a href="/">Кино</a></li>
               <li><a href="/">Спектакли</a></li>
             </ul>
-            <div class="select-types"><a href="/">Все типы</a></div>
+            <div class="select-types"><a href="#"><span>Все типы</span></a>
+              <div>
+                <ul>
+                  <li data-value="1">Название типа</li>
+                  <li data-value="2">Название ещё одного типа</li>
+                  <li data-value="3">Вот ещё одно</li>
+                  <li data-value="4">Выбранный тип</li>
+                  <li data-value="5">Выбери меня</li>
+                  <li data-value="6">Название типа</li>
+                  <li data-value="7">Название ещё одного типа</li>
+                  <li data-value="8">Вот ещё одно</li>
+                  <li data-value="9">Выбери меня</li>
+                  <li data-value="10">Выбери меня</li>
+                  <li data-value="11">Название типа</li>
+                  <li data-value="1">Название типа</li>
+                  <li data-value="2">Название ещё одного типа</li>
+                  <li data-value="3">Вот ещё одно</li>
+                  <li data-value="4">Выбранный тип</li>
+                  <li data-value="5">Выбери меня</li>
+                </ul>
+              </div>
+            </div>
           </nav>
 
           <div class="actions clearfix">

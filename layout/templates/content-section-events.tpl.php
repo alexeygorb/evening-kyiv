@@ -12,7 +12,7 @@
               <li><a href="/">Кино</a></li>
               <li><a href="/">Спектакли</a></li>
             </ul>
-            <div class="select-types"><a href="/">Все типы</a></div>
+            <div class="select-types"><a href="#"><span>Все типы</span></a></div>
           </nav>
 
           <div class="actions clearfix">

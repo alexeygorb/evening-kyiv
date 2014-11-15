@@ -144,13 +144,21 @@ header {
   text-indent: -9999px;
   background: url('../images/social.png') no-repeat scroll 0 0;
   height: 18px;
-  width: 18px;
+  width: 19px;
 }
 
-.social li.twitter a { background-position: -19px 0; }
-.social li.gplus a { background-position: -38px 0; }
-.social li.fb a { background-position: -57px 0; }
-.social li.youtube a { background-position: -76px 0; }
+.social li.vk a:hover,
+.social li.twitter a:hover,
+.social li.gplus a:hover,
+.social li.fb a:hover,
+.social li.youtube a:hover {
+  opacity: 0.75;
+}
+
+.social li.twitter a { background-position: -20px 0; }
+.social li.gplus a { background-position: -39px 0; }
+.social li.fb a { background-position: -58px 0; }
+.social li.youtube a { background-position: -77px 0; }
 
 .social li.rss {
   line-height: 17px;
@@ -233,21 +241,73 @@ header .header-news .header-news-element .article-count {
   background: none;
 }
 
+#menu-secondary li a {
+  color: #1a93bb;
+}
+
 #menu-secondary li.search {
   background: none;
   padding-left: 10px;
+}
+#menu-secondary li.search.transition a,
+#menu-secondary li.search.transition form#search-form input  {
+  -webkit-transition: padding-left 0.4s ease-out, padding-right 0.4s ease-out, width 0.4s ease-out, border 0.4s ease-out, background-position 0.4s ease-out;
+  -moz-transition: padding-left 0.4s ease-out, padding-right 0.4s ease-out, width 0.4s ease-out, border 0.4s ease-out, background-position 0.4s ease-out;
+  -o-transition: padding-left 0.4s ease-out, padding-right 0.4s ease-out, width 0.4s ease-out, border 0.4s ease-out, background-position 0.4s ease-out;
+  transition: padding-left 0.4s ease-out, padding-right 0.4s ease-out, width 0.4s ease-out, border 0.4s ease-out, background-position 0.4s ease-out;
 }
 #menu-secondary li.search a {
   display: block;
   text-indent: -9999px;
   background: url('../images/search.png') no-repeat scroll 0 0;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+}
+
+#menu-secondary li.search.collapsed a {
+  display: inline-block;
   width: 18px;
   height: 17px;
 }
 
-#menu-secondary li a {
-  color: #1a93bb;
+form#search-form {
+  display: inline-block;
+  font-size: 12px;
+  vertical-align: top;
+  margin-top: -5px;
 }
+
+form#search-form input {
+  height: 14px;
+  font-size: 12px;
+  color: #777;
+  border: 1px solid #e2ded9;
+  padding: 7px 12px 5px 28px;
+  outline: none;
+  background: url('../images/search.png') no-repeat scroll 6px 4px white;
+  -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow:    inset 0px 1px 3px 0px rgba(0, 0, 0, 0.35);
+  -o-box-shadow:    inset 0px 1px 3px 0px rgba(0, 0, 0, 0.35);
+  box-shadow:         inset 0px 1px 3px 0px rgba(0, 0, 0, 0.35);
+  -moz-border-radius: 13px; /* Firefox */
+  -webkit-border-radius: 13px; /* Safari, Google Chrome */
+  -khtml-border-radius: 13px; /* KHTML */
+  -o-border-radius: 13px; /* Opera */
+  -ms-border-radius: 13px; /* IE8 */
+  -icab-border-radius: 13px; /* Icab */
+  border-radius: 13px; /* CSS3 */
+  width: 146px;
+}
+
+#menu-secondary li.search.collapsed form#search-form input {
+  padding-left: 0;
+  padding-right: 0;
+  width: 0;
+  border: 0;
+  background-position: -27px 4px;
+}
+
 
 #header-icons {
   position: absolute;
@@ -367,9 +427,9 @@ nav#main-menu {
 
 nav#emo-tags {
   position: absolute;
-  top: 186px;
+  top: 171px;
   left: 0;
-  padding: 1px 1px 1px 31px;
+  padding: 16px 1px 16px 31px;
   width: 1003px;
   vertical-align: middle;
 }
@@ -400,13 +460,13 @@ nav#emo-tags a {
   margin-top: 1px;
 }
 
+nav#emo-tags a.active,
 nav#emo-tags a:hover {
   color: white;
   background-color: #fd3c3c;
   border-color: #fd3c3c;
   text-decoration: none;
 }
-
 
 nav ul {
   list-style: none;
@@ -466,7 +526,7 @@ nav ul li a:hover {
   padding-right: 15px;
   display: table-cell;
   width: 750px;
-
+  position: relative;
 }
 aside.sidebar-right {
   display: table-cell;
@@ -921,18 +981,81 @@ footer .footer-top .copyright {
 
 #section-events nav .select-types {
   float: right;
+  position: relative;
+  z-index: 7;
 }
 
-#section-events nav .select-types a {
+#section-events nav .select-types > a {
   display: block;
-  background: url('../images/sprite.png') no-repeat scroll 0px -183px;
+  background: url('../images/sprite.png') no-repeat scroll 0 -181px;
   padding-left: 15px;
-  border-bottom: 1px dotted #333;
   margin-top: 11px;
+}
+#section-events nav .select-types > a span {
+  border-bottom: 1px dotted #333;
+}
+
+#section-events nav .select-types > a.active {
+  background-position: -15px -203px;
 }
 
 #section-events nav .select-types a:hover {
   text-decoration: none;
+}
+
+#section-events nav .select-types > div {
+  display: none;
+  position: absolute;
+  background: white;
+  padding: 44px 0 10px;
+  z-index: -1;
+  width: 250px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow:    0 0 20px 0 rgba(0, 0, 0, 0.15);
+  box-shadow:         0 0 20px 0 rgba(0, 0, 0, 0.15);
+  top: 0;
+  right: -10px;
+  height: 175px;
+}
+
+#section-events nav .select-types > div ul,
+#section-events nav .select-types > div ul li {
+  text-transform: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  float: none;
+  font-weight: normal;
+}
+
+#section-events nav .select-types > div ul li {
+  padding: 0 25px 0 20px;
+  color: #333333;
+  display: block;
+  font-size: 15px;
+  line-height: 25px;
+
+}
+#section-events nav .select-types > div ul li.active,
+#section-events nav .select-types > div ul li:hover {
+  background: #00bffe;
+  color: white;
+}
+
+#section-events nav .select-types > div .mCSB_inside > .mCSB_container {
+  margin-right: 0;
+}
+
+#section-events nav .select-types > div .mCSB_scrollTools .mCSB_draggerRail {
+  background: none;
+}
+
+#section-events nav .select-types > div .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background: rgba(0, 0, 0, 0.2);
+  width: 9px;
+  -moz-border-radius: 0; /* Firefox */
+  -webkit-border-radius: 0; /* Safari, Google Chrome */
+  border-radius: 0; /* CSS3 */
 }
 
 #section-events .actions {
@@ -1102,9 +1225,9 @@ aside .events-list article .venue {
 .content-sidebar-left {
   background: white;
   border-top: 4px solid #00befd;
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow:    0px 0px 20px 0px rgba(0, 0, 0, 0.15);
-  box-shadow:         0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow:    0 0 20px 0 rgba(0, 0, 0, 0.15);
+  box-shadow:         0 0 20px 0 rgba(0, 0, 0, 0.15);
   position:relative;
   padding: 22px 25px 0;
   z-index: 5;
@@ -1119,7 +1242,7 @@ aside .events-list article .venue {
 
 .section-main aside .news-list {
   padding-left: 1px;
-  padding-top: 0px;
+  padding-top: 0;
 }
 
 .section-main aside .news-list .news-list-item {
@@ -1232,7 +1355,7 @@ article.full .taxonomy {
 }
 
 article.full .taxonomy a {
-  margin-right: 0px;
+  margin-right: 0;
   display: inline-block;
   background-color: transparent;
   color: #333;
@@ -1323,7 +1446,7 @@ article.full .text p {
 .like-block .moods .like a {
   border: none;
   text-indent: -9999px;
-  background: url('../images/sprite.png') no-repeat scroll 0px -520px;
+  background: url('../images/sprite.png') no-repeat scroll 0 -520px;
   -moz-border-radius: 0; /* Firefox */
   -webkit-border-radius: 0; /* Safari, Google Chrome */
   -khtml-border-radius: 0; /* KHTML */
@@ -1389,7 +1512,7 @@ article.full .text p {
 
 .share-block .shares a.fb {
   background-color: #3c5a98;
-  background-position: 9px 0px;
+  background-position: 9px 0;
 }
 
 .share-block .shares a.vk {
@@ -1556,3 +1679,117 @@ article.full .text p {
 .front-news-list .section-title {
   margin-bottom:15px;
 }
+
+#section-events .calendar-wrapper {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 178px;
+  background: white;
+  -moz-border-radius: 6px; /* Firefox */
+  -webkit-border-radius: 6px; /* Safari, Google Chrome */
+  -khtml-border-radius: 6px; /* KHTML */
+  -o-border-radius: 6px; /* Opera */
+  -ms-border-radius: 6px; /* IE8 */
+  -icab-border-radius: 6px; /* Icab */
+  border-radius: 6px; /* CSS3 */
+  padding: 10px 11px;
+}
+
+#section-events .calendar {
+  -moz-border-radius: 6px; /* Firefox */
+  -webkit-border-radius: 6px; /* Safari, Google Chrome */
+  -khtml-border-radius: 6px; /* KHTML */
+  -o-border-radius: 6px; /* Opera */
+  -ms-border-radius: 6px; /* IE8 */
+  -icab-border-radius: 6px; /* Icab */
+  border-radius: 6px; /* CSS3 */
+  background: #fbf7f1;
+  overflow: hidden;
+}
+
+/* JQUERY UI OVERRIDES */
+.ui-datepicker.ui-widget-content {
+  font-size: 14px;
+  border: 0;
+  background: none;
+  position: relative;
+  z-index: 10;
+  width: 214px;
+  padding: 0;
+}
+.ui-datepicker .ui-datepicker-header {
+  background: #dfdad4;
+  border: 0;
+  font-weight: normal;
+  padding: 0.35em 0 !important;
+}
+.ui-datepicker .ui-datepicker-calendar table td {
+  text-align: center;
+  padding: 5px 1px 0px 1px;
+}
+.ui-datepicker .ui-datepicker-calendar thead {
+  background: #eeeae5;
+}
+.ui-datepicker .ui-datepicker-calendar thead tr th {
+  font-weight: normal;
+  padding: 10px 0 8px 0;
+}
+.ui-datepicker .ui-datepicker-calendar thead tr th.ui-datepicker-week-end {
+  color: #fe4800;
+}
+.ui-datepicker .ui-datepicker-calendar td a {
+  text-align: center;
+  background: none;
+  border: 0;
+  position: relative;
+}
+
+.ui-datepicker .ui-datepicker-calendar td a.ui-state-active {
+  color: white;
+}
+.ui-datepicker .ui-datepicker-calendar td a.ui-state-active:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  -moz-border-radius: 13px; /* Firefox */
+  -webkit-border-radius: 13px; /* Safari, Google Chrome */
+  -khtml-border-radius: 13px; /* KHTML */
+  -o-border-radius: 13px; /* Opera */
+  -ms-border-radius: 13px; /* IE8 */
+  -icab-border-radius: 13px; /* Icab */
+  border-radius: 13px; /* CSS3 */
+  background: #fe4800;
+  right: 1px;
+  top: -4px;
+  z-index: -1;
+}
+
+.ui-datepicker .ui-datepicker-header  .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-header  .ui-datepicker-next {
+  top: 5px;
+
+}
+
+.ui-datepicker .ui-datepicker-header  .ui-datepicker-prev span {
+  background: url('../images/sprite.png') no-repeat scroll 0 -717px;
+}
+
+.ui-datepicker .ui-datepicker-header  .ui-datepicker-next span {
+  background: url('../images/sprite.png') no-repeat scroll 0 -767px;
+}
+
+
+.calendar-wrapper a.x {
+  display: block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  top: -15px;
+  right: -15px;
+  background: url('../images/sprite.png') no-repeat scroll -1px -816px;
+  text-indent: -9999px;
+}
+

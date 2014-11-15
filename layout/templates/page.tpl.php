@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="/layout/css/jquery.mCustomScrollbar.css"/>
   <script type="text/javascript" src="/layout/js/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="/layout/js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/layout/js/jquery.ui.datepicker-ru.js"></script>
   <script type="text/javascript" src="/layout/js/jquery.equalizer.min.js"></script>
   <script type="text/javascript" src="/layout/js/jquery.mCustomScrollbar.concat.min.js"></script>
   <script type="text/javascript" src="/layout/js/scripts.js"></script>

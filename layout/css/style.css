@@ -1102,12 +1102,15 @@ nav.events ul a.active {
   font-size: 12px;
   margin-bottom: 16px;
 }
-#section-events .actions a {
+#section-events .actions a,
+.page-svin-page .actions a {
   display: block;
   float: left;
   color: #1a93bb;
   background: url('../images/sprite.png') no-repeat scroll 7px -422px;
   text-transform: uppercase;
+  font-size: 12px;
+  line-height: 13px;
   font-weight: bold;
   border: 2px solid white;
   padding: 10px 11px 10px 34px;
@@ -1118,6 +1121,12 @@ nav.events ul a.active {
   -ms-border-radius: 5px; /* IE8 */
   -icab-border-radius: 5px; /* Icab */
   border-radius: 5px; /* CSS3 */
+}
+
+.page-svin-page .actions a {
+  float: right;
+  border-color: #efebe6;
+  margin-top: -1px;
 }
 
 #section-events .actions a.add {
@@ -1962,25 +1971,35 @@ article.news.teaser p {
 .event-types {
 
 }
-.event-types ul {
+.event-types ul,
+.issue-block .block-content ul,
+.regions-block .block-content ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.event-types li {
+.event-types li,
+.issue-block .block-content li,
+.regions-block .block-content li {
   list-style: none;
   text-transform: uppercase;
   color: #333333;
 }
-.event-types li a {
+.event-types li a,
+.issue-block .block-content li a,
+.regions-block .block-content li a {
   display: block;
   color: #333333;
-  line-height: 29px;
-  padding: 0 12px;
+  line-height: 31px;
+  padding: 0 10px;
   margin: 0;
 }
 .event-types li a.active,
-.event-types li a:hover {
+.event-types li a:hover,
+.issue-block .block-content li a.active,
+.regions-block .block-content li a.active,
+.issue-block .block-content li a:hover,
+.regions-block .block-content li a:hover {
   background: #00bffe;
   color: white;
   text-decoration: none;
@@ -2178,4 +2197,162 @@ article.news.teaser p {
 .date-section article .content {
   padding-left: 0;
   padding-right: 0;
+}
+
+.page-svin-page h2.title {
+  margin-top: -16px;
+  padding: 0 0 6px 0;
+}
+
+.page-svin-page h2.title div {
+  background: url('../images/sprite.png') no-repeat scroll 20px -846px;
+  padding: 0 0 0 90px;
+  height: 58px;
+  line-height: 58px;
+}
+
+.page-svin-page .page-description {
+  margin: 0 -25px;
+  padding: 16px 25px 19px;
+  line-height: 18px;
+  border-bottom: 1px solid #efebe6;
+}
+
+.page-svin-page .page-description p {
+  margin-bottom: 13px;
+}
+
+.page-svin-page .page-description .actions .dates {
+  float: left;
+  font-weight: bold;
+  padding-top: 9px;
+}
+
+.page-svin-page .share-block {
+  padding-bottom: 40px;
+  border: 0;
+}
+
+.svin-content h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 27px 0 28px;
+}
+.svin-content h3 span {
+  font-weight: normal;
+  margin-left: 3px;
+}
+
+.svin-content .map-content {
+  background: url('../images/kyiv.png') no-repeat scroll 0 0;
+  width: 500px;
+  height: 548px;
+  margin: 0 -7px 30px -8px;
+  position: relative;
+}
+
+.svin-content .map-content .region {
+  position: absolute;
+  line-height: 18px;
+  font-size: 13px;
+}
+
+.svin-content .map-content .region .name {
+  height: 20px;
+}
+
+.svin-content .map-content .region .name.highlight,
+.svin-content .map-content .region .name.highlight a {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.svin-content .map-content .region .name span {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  text-align: center;
+  line-height: 17px;
+  -moz-border-radius: 9px; /* Firefox */
+  -webkit-border-radius: 9px; /* Safari, Google Chrome */
+  -khtml-border-radius: 9px; /* KHTML */
+  -o-border-radius: 9px; /* Opera */
+  -ms-border-radius: 9px; /* IE8 */
+  -icab-border-radius: 9px; /* Icab */
+  border-radius: 9px; /* CSS3 */
+  border: 1px solid #333;
+  margin-right: 2px;
+  font-weight: normal;
+}
+
+.svin-content .map-content .region .name.highlight span {
+  border-color: #f00;
+  color: #333;
+  font-weight: normal;
+}
+
+.svin-content .map-content .region .count {
+  margin-top: 7px;
+  font-weight: bold;
+}
+
+.svin-content .map-content .region.holos {
+  left: 353px;
+  top: 427px;
+}
+
+.svin-content .map-content .region.darnitsa {
+  left: 391px;
+  top: 371px;
+}
+
+.svin-content .map-content .region.desna {
+  left: 360px;
+  top: 13px;
+}
+
+.svin-content .map-content .region.dnepr {
+  left: 402px;
+  top: 215px;
+}
+
+.svin-content .map-content .region.obolon {
+  left: 247px;
+  top: 68px;
+}
+
+.svin-content .map-content .region.pechersk {
+  left: 130px;
+  top: 468px;
+}
+
+.svin-content .map-content .region.podol {
+  left: 113px;
+  top: 26px;
+}
+
+.svin-content .map-content .region.sviatoshin {
+  left: 12px;
+  top: 86px;
+}
+.svin-content .map-content .region.sviatoshin .count { text-align: right; }
+
+.svin-content .map-content .region.solomenka {
+  left: 8px;
+  top: 332px;
+}
+
+.svin-content .map-content .region.shev {
+  left: 47px;
+  top: 405px;
+}
+
+.issue-block {
+  border-bottom: 1px dotted #c0c0c0;
+  padding-bottom: 20px;
+  margin-bottom: 14px;
+}
+
+.issue-block .block-title {
+  margin: 8px 0 10px 10px;
 }

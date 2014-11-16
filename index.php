@@ -24,6 +24,9 @@ $section = '';
     case 'report-page':
       $section = 'report-page';
       break;
+    case 'svin-page':
+      $section = 'svin-page';
+      break;
     case 'ajax':
       $section = 'ajax';
       break;

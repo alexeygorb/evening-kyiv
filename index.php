@@ -12,6 +12,12 @@ $section = '';
     case 'news-page':
       $section = 'news-page';
       break;
+    case 'events-page':
+      $section = 'events-page';
+      break;
+    case 'tag-page':
+      $section = 'tag-page';
+      break;
     case 'section':
       $section = 'section';
       break;

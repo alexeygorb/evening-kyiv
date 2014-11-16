@@ -4,7 +4,7 @@
       <div class="section-inner">
         <div class="section-main sidebar-right">
           <h2 class="section-title">События <span>/</span> Места <a href="#">(другие события)</a></h2>
-          <nav class="clearfix">
+          <nav class="events clearfix">
             <ul>
               <li><a href="/">Все</a></li>
               <li><a href="/">Концерты</a></li>

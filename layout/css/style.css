@@ -442,7 +442,8 @@ nav#emo-tags h3 {
 }
 
 
-nav#emo-tags a {
+nav#emo-tags a,
+.emo-tags-block .block-content a {
   display: inline-block;
   color: #333333;
   height: 21px;
@@ -459,9 +460,14 @@ nav#emo-tags a {
   background: #f5f1eb;
   margin-top: 1px;
 }
+.emo-tags-block .block-content a {
+  margin: 0 0 9px 0;
+}
 
 nav#emo-tags a.active,
-nav#emo-tags a:hover {
+nav#emo-tags a:hover,
+.emo-tags-block .block-content a.active,
+.emo-tags-block .block-content a:hover {
   color: white;
   background-color: #fd3c3c;
   border-color: #fd3c3c;
@@ -943,9 +949,23 @@ footer .footer-top .copyright {
   padding-bottom: 0;
 }
 
-#section-events .section-main h2.section-title span {
+#section-events .section-main h2.section-title span,
+.page-events-page h2.title span {
   color: #fe0000;
   padding: 0 11px 0 9px;
+}
+
+.page-events-page h2.title .actions {
+  float: right;
+}
+
+.page-events-page h2.title .actions .add {
+  display: block;
+  background: url('../images/sprite.png') no-repeat scroll 8px -472px;
+  padding-left: 27px;
+  font-size: 12px;
+  color: #1a93bb;
+  line-height: 17px;
 }
 
 #section-events .section-main h2.section-title a {
@@ -958,60 +978,69 @@ footer .footer-top .copyright {
   margin-bottom: 4px;
 }
 
-#section-events nav {
+nav.events {
   background: white;
   margin-top: 0;
   padding: 10px 21px 10px 12px;
 }
 
-#section-events nav ul {
+nav.events ul {
   float: left;
   text-align: left;
 }
 
-#section-events nav ul li {
+nav.events ul li {
   background-position: -3px -92px;
   padding: 0 8px 0 16px;
 }
-#section-events nav ul li:first-child {
+nav.events > ul li:first-child {
   padding: 0 8px 0 8px;
 }
 
-#section-events nav ul a {
+nav.events ul a {
   color: #999999;
 }
 
-#section-events nav ul a:hover,
-#section-events nav ul a.active {
+nav.events ul a:hover,
+nav.events ul a.active {
   color: #333333;
   text-decoration: underline;
 }
 
-#section-events nav .select-types {
+.select-types {
   float: right;
   position: relative;
   z-index: 7;
+  font-weight: normal;
 }
 
-#section-events nav .select-types > a {
+.select-types > a {
   display: block;
   background: url('../images/sprite.png') no-repeat scroll 0 -181px;
   padding-left: 15px;
   margin-top: 11px;
+  text-transform: none;
+  font-weight: normal;
 }
-#section-events nav .select-types > a span {
+/* Alter for tag page */
+.select-sort.select-types > a {
+  margin-top: 0;
+  display: inline-block;
+}
+
+.select-types > a span {
   border-bottom: 1px dotted #333;
 }
 
-#section-events nav .select-types > a.active {
+.select-types > a.active {
   background-position: -15px -203px;
 }
 
-#section-events nav .select-types a:hover {
+.select-types a:hover {
   text-decoration: none;
 }
 
-#section-events nav .select-types > div {
+.select-types > div {
   display: none;
   position: absolute;
   background: white;
@@ -1025,9 +1054,11 @@ footer .footer-top .copyright {
   right: -10px;
   height: 175px;
 }
-
-#section-events nav .select-types > div ul,
-#section-events nav .select-types > div ul li {
+.select-sort.select-types > div {
+  top: -10px;
+}
+.select-types > div ul,
+.select-types > div ul li {
   text-transform: none;
   background: none;
   padding: 0;
@@ -1036,7 +1067,7 @@ footer .footer-top .copyright {
   font-weight: normal;
 }
 
-#section-events nav .select-types > div ul li {
+.select-types > div ul li {
   padding: 0 25px 0 20px;
   color: #333333;
   display: block;
@@ -1044,21 +1075,21 @@ footer .footer-top .copyright {
   line-height: 25px;
 
 }
-#section-events nav .select-types > div ul li.active,
-#section-events nav .select-types > div ul li:hover {
+.select-types > div ul li.active,
+.select-types > div ul li:hover {
   background: #00bffe;
   color: white;
 }
 
-#section-events nav .select-types > div .mCSB_inside > .mCSB_container {
+.select-types > div .mCSB_inside > .mCSB_container {
   margin-right: 0;
 }
 
-#section-events nav .select-types > div .mCSB_scrollTools .mCSB_draggerRail {
+.select-types > div .mCSB_scrollTools .mCSB_draggerRail {
   background: none;
 }
 
-#section-events nav .select-types > div .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+.select-types > div .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   background: rgba(0, 0, 0, 0.2);
   width: 9px;
   -moz-border-radius: 0; /* Firefox */
@@ -1230,6 +1261,11 @@ aside .events-list article .venue {
   width: 535px;
   vertical-align: top;
 }
+
+.content-sidebar-left-wrapper .content-sidebar-left:last-child {
+  margin-bottom: 28px;
+}
+
 .content-sidebar-left {
   background: white;
   border-top: 4px solid #00befd;
@@ -1834,3 +1870,312 @@ aside .calendar-wrapper {
   text-indent: -9999px;
 }
 
+h3.block-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.emo-tags-block,
+.tags-list-block {
+  border-top: 2px solid #d6d6c7;
+  padding-top: 25px;
+  margin-bottom: 31px;
+  margin-right: 15px;
+}
+
+.tags-list-block .block-content a {
+  font-size: 14px;
+  margin: 0 0 9px 0;
+  -moz-border-radius: 12px; /* Firefox */
+  -webkit-border-radius: 12px; /* Safari, Google Chrome */
+  -khtml-border-radius: 12px; /* KHTML */
+  -o-border-radius: 12px; /* Opera */
+  -ms-border-radius: 12px; /* IE8 */
+  -icab-border-radius: 12px; /* Icab */
+  border-radius: 12px; /* CSS3 */
+}
+
+h2.title {
+  font-weight: bold;
+  display: block;
+  margin: 0 -25px;
+  padding: 0 25px 25px;
+  border-bottom: 1px solid #efebe6;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.tag-content {
+  padding: 5px 0 15px;
+}
+
+article.news.teaser {
+  padding: 15px 0 15px;
+  border-bottom: 1px solid #efebe6;
+}
+
+article.news.teaser:last-child {
+  padding-bottom: 0;
+  border: 0;
+}
+
+article.news.teaser.image {
+
+}
+
+article.news.teaser.image .article-image {
+  float: left;
+}
+article.news.teaser.image .article-image a,
+article.news.teaser.image .article-image img {
+  display: block;
+}
+
+article.news.teaser.image .article-meta {
+  margin-left: 260px;
+}
+
+article.news.teaser.image .title,
+article.news.teaser.image p {
+  margin-left: 260px;
+}
+
+article.news.teaser .article-meta {
+  margin-bottom: 5px;
+}
+article.news.teaser .title {
+  font-size: 18px;
+  color: #1a93bb;
+  line-height: 21px;
+  font-weight: bold;
+  margin-bottom: 11px;
+}
+article.news.teaser .title a {
+  color: #1a93bb;
+}
+
+article.news.teaser p {
+  margin-bottom: 0;
+}
+
+.event-types {
+
+}
+.event-types ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.event-types li {
+  list-style: none;
+  text-transform: uppercase;
+  color: #333333;
+}
+.event-types li a {
+  display: block;
+  color: #333333;
+  line-height: 29px;
+  padding: 0 12px;
+  margin: 0;
+}
+.event-types li a.active,
+.event-types li a:hover {
+  background: #00bffe;
+  color: white;
+  text-decoration: none;
+}
+
+.carousel-calendar {
+  position: relative;
+  margin: 0 -25px;
+  background: #f9f6f3;
+  border-bottom: 1px solid #efebe6;
+  padding: 0 25px;
+}
+
+.carousel-calendar .carousel {
+  overflow: hidden;
+  position: relative;
+  width: 485px;
+  z-index: 10;
+}
+
+.carousel-calendar .carousel:before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 134px;
+  background: url('../images/fade-left.png') repeat-y scroll 0 0;
+  z-index: 11;
+}
+
+.carousel-calendar .carousel:after {
+  content: ' ';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 134px;
+  background: url('../images/fade-right.png') repeat-y scroll 0 0;
+  z-index: 11;
+}
+
+.carousel-calendar .carousel-content {
+  width: 20000em;
+  position: relative;
+  padding: 21px 0;
+  margin: 0 20px;
+  left: 0;
+}
+
+.carousel-calendar .date {
+  float: left;
+  width: 86px;
+  height: 90px;
+  background: white;
+  border: 1px solid #efebe6;
+  -moz-border-radius: 9px; /* Firefox */
+  -webkit-border-radius: 9px; /* Safari, Google Chrome */
+  -khtml-border-radius: 9px; /* KHTML */
+  -o-border-radius: 9px; /* Opera */
+  -ms-border-radius: 9px; /* IE8 */
+  -icab-border-radius: 9px; /* Icab */
+  border-radius: 9px; /* CSS3 */
+  cursor: pointer;
+  position: relative;
+}
+
+.carousel-calendar .carousel-content .date.active,
+.carousel-calendar .carousel-content .date:hover {
+  background: #00bffe;
+  color: white !important;
+  border-color: #00bffe;
+}
+
+.carousel-calendar .prev,
+.carousel-calendar .next {
+  display: block;
+  position: absolute;
+  top: 46px;
+  width: 33px;
+  height: 33px;
+  text-indent: -9999px;
+  background: url('../images/sprite.png') no-repeat scroll -11px -785px white;
+  border: 1px solid #eeeae5;
+  z-index: 12;
+  -moz-border-radius: 19px; /* Firefox */
+  -webkit-border-radius: 19px; /* Safari, Google Chrome */
+  -khtml-border-radius: 19px; /* KHTML */
+  -o-border-radius: 19px; /* Opera */
+  -ms-border-radius: 19px; /* IE8 */
+  -icab-border-radius: 19px; /* Icab */
+  border-radius: 19px; /* CSS3 */
+}
+
+.carousel-calendar .prev.inactive,
+.carousel-calendar .next.inactive {
+  opacity: .5;
+  cursor: default;
+}
+
+.carousel-calendar .prev {
+  left: 3px;
+}
+
+.carousel-calendar .next {
+  right: 3px;
+  background-position: -51px -785px;
+}
+
+.carousel-calendar .date:last-child {
+  margin-right: 20px;
+}
+.carousel-calendar .date .weekday {
+  font-size: 12px;
+  text-align: center;
+  padding: 0 10px;
+  text-transform: uppercase;
+  margin-top: 11px;
+  font-weight: bold;
+}
+.carousel-calendar .date .weekday.weekend {
+  color: #fe5a26;
+}
+.carousel-calendar .date.active .weekday.weekend,
+.carousel-calendar .date:hover .weekday.weekend {
+  color: white;
+}
+
+.carousel-calendar .date .monthday {
+  font-size: 31px;
+  font-weight: bold;
+  padding: 0 10px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.carousel-calendar .date .month {
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 0 10px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.carousel-calendar .date .count {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  -moz-border-radius: 16px; /* Firefox */
+  -webkit-border-radius: 16px; /* Safari, Google Chrome */
+  -khtml-border-radius: 16px; /* KHTML */
+  -o-border-radius: 16px; /* Opera */
+  -ms-border-radius: 16px; /* IE8 */
+  -icab-border-radius: 16px; /* Icab */
+  border-radius: 16px; /* CSS3 */
+  background: #fe5a26;
+  line-height: 30px;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  top: -15px;
+  right: 8px;
+  z-index: 12;
+}
+
+.date-section {
+  margin: 0 -25px;
+  border-top: 1px solid #efebe6;
+}
+
+.date-sections > .date-section:first-child {
+  border: none;
+}
+
+.date-section h3.date {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 23px 25px;
+}
+
+.date-section h3.date span {
+  font-size: 31px;
+}
+
+.date-section article {
+  margin: 0 12px 18px 25px;
+}
+.date-section article:first-child,
+.date-section article:last-child {
+  margin: 0 12px 0 25px;
+}
+
+.date-section article .content {
+  padding-left: 0;
+  padding-right: 0;
+}

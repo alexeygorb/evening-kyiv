@@ -162,30 +162,45 @@
       $('.select-types li').click(function () {
         var value = $(this).data('value');
         console.log(value);
+        $('.select-types a span').html($(this).html());
         link.click();
       });
       menu.mCustomScrollbar();
     }
   };
 
-  var initBehaviors = function(context) {
+  var initCarousel = function() {
+    var carousel = $('.carousel-calendar').once('calendar');
+    carousel.each(function() {
+      $(this).find('.carousel').jcarousel();
+      $('.prev', this)
+        .on('jcarouselcontrol:inactive', function() {
+          $(this).addClass('inactive');
+        })
+        .on('jcarouselcontrol:active', function() {
+          $(this).removeClass('inactive');
+        })
+        .jcarouselControl({
+          target: '-=3'
+        });
 
-    equalizeBlocks(context);
-    handBookInit(context);
-    calendarInit(context);
-    dropSelector(context);
-
+      $('.next', this)
+        .on('jcarouselcontrol:inactive', function() {
+          $(this).addClass('inactive');
+        })
+        .on('jcarouselcontrol:active', function() {
+          $(this).removeClass('inactive');
+        })
+        .jcarouselControl({
+          target: '+=3'
+        });
+    });
   };
 
-  $(function() {
-
-    searchBarInit();
-    emoMenuBehavior();
-
-    initBehaviors(document);
+  var initAjax = function(context) {
 
     var offset = 5;
-    $('#section-news .more-link').click(function(e) {
+    $('#section-news .more-link').once('ajax').click(function(e) {
       e.preventDefault();
       $.ajax('/ajax/news/' + offset, {
         dataType: 'html',
@@ -200,5 +215,46 @@
         }
       });
     });
+
+    var date = '2014-11-12';
+    $('.date-sections .more-link').once('ajax').click(function(e) {
+      e.preventDefault();
+      $.ajax('/ajax/events/' + date, {
+        dataType: 'json',
+        success: function(data) {
+          date = data.date;
+          offset += 6;
+          var receiver = $('.date-sections .ajax-receiver');
+          var newContent = $(data.content).wrapAll('<div class="new-content"></div>').parent();
+          newContent.hide();
+          newContent.appendTo(receiver);
+          newContent.slideDown();
+          initBehaviors(receiver);
+        }
+      });
+    });
+
+
+
+  };
+
+  var initBehaviors = function(context) {
+
+    equalizeBlocks(context);
+    handBookInit(context);
+    calendarInit(context);
+    dropSelector(context);
+    initAjax(context);
+
+  };
+
+  $(function() {
+
+    searchBarInit();
+    emoMenuBehavior();
+    initCarousel();
+
+    initBehaviors(document);
+
   });
 })(jQuery);

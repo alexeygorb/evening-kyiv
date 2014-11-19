@@ -47,6 +47,7 @@
               <div class="dates">22.09.2014 - 29.09.2014</div>
               <a href="#" class="date">Выбрать дату</a>
             </div>
+            <div class="calendar-wrapper"><div class="calendar"></div><a href="#" class="x">&nbsp;</a></div>
 
           </div>
           <div class="svin-content">

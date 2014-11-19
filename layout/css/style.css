@@ -731,8 +731,36 @@ aside .more-link {
 #section-news aside .inner {
   border-top: 4px solid #d6d6c7;
   padding: 14px 0 25px 0;
+  width: 240px;
 }
 
+.page-main #section-news aside .inner.sticky {
+  position: fixed;
+  top: 0 !important;
+  border-color: #fbf7f1;
+}
+
+.page-main #section-news aside .inner.stopped {
+  position: absolute;
+  border-color: #fbf7f1;
+}
+.page-main #section-news aside .inner .mCSB_container {
+  margin-right: 0;
+}
+.page-main #section-news aside .inner .mCustomScrollBox {
+  margin-right: -15px;
+  padding-right: 15px;
+}
+.page-main #section-news aside .inner .mCSB_scrollTools .mCSB_draggerRail {
+  background: none;
+}
+.page-main #section-news aside .inner .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  background: #d6d6c7;
+  width: 9px;
+}
 .news-logo {
   display: block;
   margin: 0 auto 16px;
@@ -1765,6 +1793,20 @@ article.report.full .share-block {
   left: 0;
   top: 178px;
   background: white;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow:    0 0 20px 0 rgba(0, 0, 0, 0.15);
+  box-shadow:         0 0 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.page-svin-page .calendar-wrapper {
+  display: none;
+  position: absolute;
+  background: white;
+  z-index: 15;
+  right: 20px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow:    0 0 20px 0 rgba(0, 0, 0, 0.15);
+  box-shadow:         0 0 20px 0 rgba(0, 0, 0, 0.15);
 }
 
 aside .calendar-wrapper {
@@ -1852,7 +1894,9 @@ aside .calendar-wrapper {
   top: -4px;
   z-index: -1;
 }
-
+.page-svin-page .ui-datepicker .ui-datepicker-calendar td a.ui-state-active:before {
+  top: -2px;
+}
 .ui-datepicker .ui-datepicker-header  .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-header  .ui-datepicker-next {
   top: 5px;

@@ -112,7 +112,6 @@
       // Calculate the height.
       var scrollStart = wrapper.offset().top;
       var stopPoint = $('#section-events').position().top;
-      console.log(scrollStart, stopPoint);
       var heightCorrection = -43;
 
       // Calculate initial height;
@@ -142,6 +141,7 @@
             wrapper.addClass('stopped');
             wrapper.removeClass('sticky');
             wrapper.css('top', stopPoint - wrapper.outerHeight(true));
+            return;
           }
           else {
             wrapper.addClass('sticky');

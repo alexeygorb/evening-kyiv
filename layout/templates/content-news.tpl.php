@@ -119,7 +119,12 @@
 
           <div class="read-more">
             <h3>Читать на эту тему</h3>
-            <div class="read-more-list clearfix">
+            <div class="read-more-list">
+              <div class="read-more-list-content">
+                <?php for ($i = 0; $i < 11; $i++):
+                  $rand = mt_rand(0, 1);
+                  if ($rand) {
+                  ?>
               <article class="latest">
                 <div class="article-text">
                   <div class="section-name">Столица</div>
@@ -130,6 +135,7 @@
                   <div class="published">28 октября 2014</div>
                 </div>
               </article>
+                    <?php } else { ?>
               <article class="latest">
                 <div class="article-text">
                   <div class="section-name">Свинский рейтинг</div>
@@ -140,13 +146,16 @@
                   <div class="published">28 октября 2014</div>
                 </div>
               </article>
+                  <?php } ?>
+                <?php endfor; ?>
+              </div>
             </div>
           </div>
 
         </div>
         <div class="content-sidebar-left content-pager">
           <div class="pager">
-            <div class="all">1-7 из 42</div>
+            <div class="all"><span class="range">1-2</span> из <span class="count"><?php print $i; ?></span></div>
             <a href="/" class="prev">назад</a>
             <a href="/" class="next">вперед</a>
           </div>

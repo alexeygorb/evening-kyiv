@@ -286,6 +286,49 @@
           target: '+=3'
         });
     });
+
+    $('.read-more').once('carousel').each(function() {
+      var carousel = $(this).find('.read-more-list');
+      carousel.jcarousel();
+      carousel.on('jcarousel:scrollend', function(event, carousel, target, animate) {
+        // All count just in case...
+        var all = $(carousel.element()).find('article');
+        var count = all.length;
+        $('.content-pager .pager .all .count').html(count);
+
+        var visible = carousel.fullyvisible();
+
+        var firstIndex = $(visible.get(0)).index();
+        var range = firstIndex + 1;
+        if (visible.length > 1) {
+          range += '-' + (firstIndex + visible.length);
+        }
+
+        $('.content-pager .pager .all .range').html(range);
+
+      });
+      $('.content-pager .pager .prev')
+        .on('jcarouselcontrol:inactive', function() {
+          $(this).addClass('inactive');
+        })
+        .on('jcarouselcontrol:active', function() {
+          $(this).removeClass('inactive');
+        })
+        .jcarouselControl({
+          target: '-=2'
+        });
+
+      $('.content-pager .pager .next')
+        .on('jcarouselcontrol:inactive', function() {
+          $(this).addClass('inactive');
+        })
+        .on('jcarouselcontrol:active', function() {
+          $(this).removeClass('inactive');
+        })
+        .jcarouselControl({
+          target: '+=2'
+        });
+    });
   };
 
   var initAjax = function(context) {

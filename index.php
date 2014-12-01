@@ -30,6 +30,9 @@ $section = '';
     case 'ajax':
       $section = 'ajax';
       break;
+    case 'handbook':
+      $section = 'handbook';
+      break;
     case 'main':
     default:
       $section = 'main';

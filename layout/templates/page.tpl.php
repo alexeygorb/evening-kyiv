@@ -21,6 +21,14 @@
   <?php if (!empty($args[0]) && $args[0] == 'report-page'): ?>
     <script type="text/javascript" src="/layout/js/carousel.js"></script>
   <?php endif; ?>
+  <?php if (!empty($args[0]) && $args[0] == 'handbook'): ?>
+    <script type="text/javascript" src="/layout/js/map.js"></script>
+    <script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDJECpGnsZLOwuc2Ahiakmc8tG37Di0iwE&sensor=TRUE">
+    </script>
+
+  <?php endif; ?>
+
 </head>
 <body class="<?php print $body_class; ?>">
 <div id="content-wrapper">

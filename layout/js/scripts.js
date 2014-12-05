@@ -372,6 +372,10 @@
 
   };
 
+  var popups = function() {
+    $(".fancybox").fancybox({padding: 0});
+  };
+
   var initBehaviors = function(context) {
 
     equalizeBlocks(context);
@@ -389,6 +393,7 @@
     emoMenuBehavior();
     floatSidebar();
     initCarousel();
+    popups();
 
     initBehaviors(document);
 

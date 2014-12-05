@@ -4,12 +4,15 @@
   <title>Вечерний Киев</title>
   <meta charset="UTF-8"/>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=cyrillic,cyrillic-ext,latin' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="/layout/css/style.css"/>
   <link rel="stylesheet" type="text/css" href="/layout/css/jquery-ui.min.css"/>
   <link rel="stylesheet" type="text/css" href="/layout/css/jquery.mCustomScrollbar.css"/>
   <?php if (!empty($args[0]) && $args[0] == 'report-page'): ?>
     <link rel="stylesheet" type="text/css" href="/layout/css/carousel.css"/>
   <?php endif; ?>
+  <?php if (!empty($args[0]) && $args[0] == 'handbook'): ?>
+    <link rel="stylesheet" type="text/css" href="/layout/css/jquery.fancybox.css"/>
+  <?php endif; ?>
+  <link rel="stylesheet" type="text/css" href="/layout/css/style.css"/>
   <script type="text/javascript" src="/layout/js/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="/layout/js/jquery.once.min.js"></script>
   <script type="text/javascript" src="/layout/js/jquery.jcarousel.min.js"></script>
@@ -27,6 +30,7 @@
             src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDJECpGnsZLOwuc2Ahiakmc8tG37Di0iwE&sensor=TRUE">
     </script>
 
+    <script type="text/javascript" src="/layout/js/jquery.fancybox.pack.js"></script>
   <?php endif; ?>
 
 </head>

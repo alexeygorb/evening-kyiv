@@ -13,7 +13,7 @@
           </div>
           <ul class="add-menu">
             <li><a href="#" class="event">добавить событие</a></li>
-            <li><a href="#popup-company-form" class="company fancybox">добавить компанию</a></li>
+            <li><a href="#popup-company-form" class="company fancybox popup-link">добавить компанию</a></li>
             <li><a href="#" class="place">добавить место</a></li>
             <li><a href="#" class="ad">добавить объявление</a></li>
           </ul>
@@ -21,6 +21,39 @@
           <div class="map-wrapper">
             <div id="map" <?php print !empty($args[1]) ? 'class="shrink"' : ''; ?>></div>
           </div>
+
+          <?php if (!empty($args[1])): ?>
+            <article class="place full">
+              <h2>Название гостиницы</h2>
+              <div class="images">
+                <a href="/content/hotel1.jpg" rel="gallery" class="fancybox"><img src="/content/hotel1-thumb.jpg" width="240" height="120" /></a>
+                <a href="/content/hotel2.jpg" rel="gallery" class="fancybox"><img src="/content/hotel2-thumb.jpg" width="240" height="120" /></a>
+              </div>
+              <div class="details">
+                <div class="row"><span>Город</span> Киев</div>
+                <div class="row"><span>Адрес</span> пр-кт Воздухофлотский, 35/32</div>
+                <div class="row"><span>Район</span> Соломенский</div>
+                <div class="row"><span>Телефон</span> (044) 442 2322, (044) 442 3322</div>
+                <div class="row"><span>Сайт</span> <a href="http://www.besthotel.com.ua">www.besthotel.com.ua</a></div>
+                <div class="row"><span>E-mail</span> <a href="mailto:info@besthotel.com.ua">info@besthotel.com.ua</a></div>
+              </div>
+
+              <div class="share-block">
+                <h3>Порекомендовать друзьям</h3>
+                <div class="shares clearfix">
+                  <a href="/" class="fb">251</a>
+                  <a href="/" class="vk">22</a>
+                  <a href="/" class="twitter">20</a>
+                  <a href="/" class="ok">Odnoklassniki</a>
+                  <a href="/" class="discuss">Обсудить <span>24</span></a>
+                </div>
+              </div>
+
+              <div class="description">
+                <p>Принять гостей в Киеве предлагает евроотель "Атлантик". Здесь 34 номера классов: "Люкс", "Стандарт","Эконом", "Студио". В распоряжении гостей прачечная, круглосуточная работа рецепции, вызов такси влюбое время, бесплатный интернет, полностью оборудованные номера, услуги хранения багажа. Обо всехуслугах в мини-отеле "Атлантик" возможно узнать на сайте заведения</p>
+              </div>
+            </article>
+          <?php endif; ?>
 
           <div id="popup-company-form" class="popup-wrapper" style="display: none;"><div class="popup-inner">
             <div class="header"><h3>Добавить компанию</h3></div>

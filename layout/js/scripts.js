@@ -373,7 +373,8 @@
   };
 
   var popups = function() {
-    $(".fancybox").fancybox({padding: 0});
+    $(".fancybox.popup-link").fancybox({padding: 0});
+    $(".fancybox:not(.popup-link)").fancybox();
   };
 
   var initBehaviors = function(context) {

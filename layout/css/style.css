@@ -1033,6 +1033,72 @@ footer .footer-top .copyright {
   padding: 12px 10px 10px 20px;
 }
 
+article.place.full {
+  padding: 7px 7px 30px 7px;
+  font-size: 16px;
+}
+
+article.place.full h2 {
+  margin: 35px 0 29px -2px;
+}
+
+article.place .images {
+  margin-bottom: 40px;
+}
+article.place .images a.fancybox {
+  display: inline-block;
+  margin-right: 17px;
+}
+
+article.place .images a.fancybox img {
+  display: block;
+}
+
+article.place .images a.fancybox:after {
+  display: block;
+  content: ' ';
+  width: 34px;
+  height: 34px;
+  background: url('../images/zoom.png') no-repeat scroll 0 0;
+  position: relative;
+  margin: -34px 0 0 -34px;
+  left: 240px;
+}
+
+article.place .details {
+  margin-bottom: 40px;
+  font-weight: bold;
+  line-height: 18px;
+  padding-top: 2px;
+}
+
+article.place .details .row {
+  margin-bottom: 16px;
+}
+
+article.place .details .row span {
+  display: inline-block;
+  width: 91px;
+  font-weight: normal;
+  margin-left: 18px;
+}
+
+article.place .details .row a {
+  font-weight: normal;
+  color: #1a93bb;
+}
+
+article.place .share-block {
+  padding-bottom: 28px;
+  padding-top: 22px;
+  border-bottom: 0;
+  border-top: 1px dotted #c0c0c0;
+}
+
+article.place .description {
+  line-height: 1.2em;
+}
+
 .map-wrapper {
   margin: 0 -20px;
 }

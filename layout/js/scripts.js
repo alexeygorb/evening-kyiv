@@ -373,8 +373,10 @@
   };
 
   var popups = function() {
-    $(".fancybox.popup-link").fancybox({padding: 0});
-    $(".fancybox:not(.popup-link)").fancybox();
+    if ($.fancybox != undefined) {
+      $(".fancybox.popup-link").fancybox({padding: 0});
+      $(".fancybox:not(.popup-link)").fancybox();
+    }
   };
 
   var initBehaviors = function(context) {

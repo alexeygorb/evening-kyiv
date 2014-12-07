@@ -127,7 +127,6 @@
         <a href="/"><img src="http://dummyimage.com/720x90/dadada/ffffff.png" /></a>
       </div>
 
-
       <div class="popular-content">
         <h3>Популярные материалы</h3>
         <!-- THREE LATEST NEWS section -->

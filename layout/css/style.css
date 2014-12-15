@@ -73,6 +73,7 @@ body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #333333;
+  min-width: 1065px;
 }
 
 a, a:link, a:active {
@@ -903,7 +904,7 @@ nav.footer ul li a:hover {
 nav.footer {
   margin: 0 auto;
   padding: 11px 0 90px;
-  border: 1px solid #5c5c5c;
+  border-top: 1px solid #5c5c5c;
   font-size: 12px;
 }
 
@@ -2922,4 +2923,20 @@ article.news.teaser p {
   height: 3px;
   background-color: #d89b3b;
   margin-top: 6px;
+}
+
+@media (max-width: 1120px) {
+  header {
+    background: none;
+    padding: 0;
+  }
+  .section-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    background: none;
+  }
+  #section-events .section-outer {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
